@@ -1,1 +1,156 @@
-/* Test */
+/* 
+ * DRUM KIT 
+ *
+*/
+
+body {
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.wrapper {
+    height: 100vh;
+    background: linear-gradient(rgba(30, 21, 71, 0.5), rgba(16, 24, 34, 0.8)), url('/public/images/bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 2fr minmax(100px, 150px) 2fr;
+    grid-gap: 1em;
+    grid-template-areas: 
+    ". title ."
+    ". drums ."
+    ". footer .";
+}
+
+.site-title--section {
+    grid-area: title;
+}
+
+.site-title {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 40px;
+    font-weight: 200;
+    text-transform: uppercase;
+    color: white;
+}
+
+.drum-boxes--section {
+    grid-area: drums;
+    display: block;
+}
+
+.drum-boxes {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: 100px;
+    grid-gap: 1em;
+    grid-template-areas: 
+    "kick snare clap ch oh tl th ride crash"
+}
+
+.drum-box--title {
+    margin-top: 30%;
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+}
+
+.drum-box--key {
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 800;
+    color: coral;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 0;
+    width:100%;
+}
+
+%drum-box {
+    display: inline-block;
+    margin: 0 auto;
+    width: 100px;
+    border: 5px rgb(57, 221, 207) solid;
+    text-align: center;
+    position: relative;
+}
+
+%drum-box:hover {
+    border: 5px rgb(217, 236, 236) solid;
+    animation: growBox .5s;
+}
+
+@keyframes growBox {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#drum-box--kick {
+    @extend %drum-box;
+    grid-area: kick;
+}
+
+#drum-box--snare {
+    @extend %drum-box;
+    grid-area: snare;
+}
+
+#drum-box--clap {
+    @extend %drum-box;
+    grid-area: clap;
+}
+
+#drum-box--closed-hat {
+    @extend %drum-box;
+    grid-area: ch;
+}
+
+#drum-box--open-hat {
+    @extend %drum-box;
+    grid-area: oh;
+}
+
+#drum-box--tom-lo {
+    @extend %drum-box;
+    grid-area: tl;
+}
+
+#drum-box--tom-hi {
+    @extend %drum-box;
+    grid-area: th;
+}
+
+#drum-box--ride {
+    @extend %drum-box;
+    grid-area: ride;
+}
+
+#drum-box--crash {
+    @extend %drum-box;
+    grid-area: crash;
+}
+
+.footer {
+    grid-area: footer;
+    text-align: center;
+    position: relative;
+
+    p {
+        position: absolute;
+        bottom: 0;
+        margin: 0 auto;
+        display: block;
+    }
+}
