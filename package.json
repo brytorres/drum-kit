@@ -1,0 +1,11 @@
+{
+  "name": "drum-kit",
+  "version": "1.0.0",
+  "description": "Simple web drum kit",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bryan Torres",
+  "license": "ISC"
+}
