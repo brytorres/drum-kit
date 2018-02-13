@@ -6,6 +6,8 @@
     <title>Drum Kit</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="/public/app.css" />
+    <link href="https://fonts.googleapis.com/css?family=Barlow:300,900" rel="stylesheet">  
+    <link rel="shortcut icon" href="/public/favicon.ico" type="image/x-icon">
 </head>
 <body>
     
@@ -29,34 +31,31 @@
                     <div class="drum-box--key">W</div>
                 </div>
                 
-                <div id="drum-box--clap">
-                    <div class="drum-box--title">Clap</div>
+                <div id="drum-box--snap">
+                    <div class="drum-box--title">Snap</div>
                     <div class="drum-box--key">E</div>
                 </div>
                 
                 <div id="drum-box--closed-hat">
-                    <div class="drum-box--title" style="margin-top:8%;"><span style="font-size:10px;">Closed</span> <br> Hat</div>
+                    <div class="drum-box--title" style="margin-top:8%;"><span style="font-size:12px;">Closed</span><br>Hat</div>
                     <div class="drum-box--key">U</div>
                 </div>
                 
                 <div id="drum-box--open-hat">
                     <div class="drum-box--title" style="margin-top:8%;">
-                    <span style="font-size:10px;">Open</span>
-                    <br>Hat</div>
+                    <span style="font-size:12px;">Open</span><br>Hat</div>
                     <div class="drum-box--key">I</div>
                 </div>
                 
                 <div id="drum-box--tom-lo">
                     <div class="drum-box--title" style="margin-top:8%;">
-                    <span style="font-size:10px;">Low</span>
-                    <br>Tom</div>
+                    <span style="font-size:12px;">Low</span><br>Tom</div>
                     <div class="drum-box--key">R</div>
                 </div>
                 
                 <div id="drum-box--tom-hi">
                     <div class="drum-box--title" style="margin-top:8%;">
-                    <span style="font-size:10px;">High</span>
-                    <br>Tom</div>
+                    <span style="font-size:12px;">High</span><br>Tom</div>
                     <div class="drum-box--key">T</div>
                 </div>
                 
@@ -72,6 +71,7 @@
 
             </div>
 
+            <p class="drum-boxes--instructions">Hit the  <span class="drum-boxes--instructions example">&nbsp; letters in this color</span>&nbsp; on your keyboard to play the drums</p>
         </div> <!-- End Drum Section -->
 
         <footer class="footer">
@@ -80,6 +80,7 @@
 
     </div> <!-- End Wrapper -->
 
-    <script src="/src/js/app.js"></script>
+    <script src="/public/app.bundle.min.js"></script>
+
 </body>
 </html>

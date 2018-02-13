@@ -4,7 +4,7 @@
 */
 body {
   margin: 0px;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+  font-family: 'Barlow', sans-serif; }
 
 .wrapper {
   height: 100vh;
@@ -23,20 +23,13 @@ body {
   grid-area: title; }
 
 .site-title {
+  margin-top: 110px;
   text-align: center;
-  margin-top: 12%;
-  font-size: 50px;
-  font-weight: 200;
+  font-size: 80px;
+  font-weight: 900;
   text-transform: uppercase;
-  color: white; }
-
-.site-title--double {
-  text-align: center;
-  margin-top: 12%;
-  font-size: 50px;
-  font-weight: 200;
-  text-transform: uppercase;
-  color: #dd0b0b; }
+  color: white;
+  text-shadow: 5px 5px 0px rgba(57, 221, 207, 0.2); }
 
 .drum-boxes--section {
   grid-area: drums;
@@ -48,32 +41,44 @@ body {
   grid-template-columns: repeat(9, 1fr);
   grid-auto-rows: 100px;
   grid-gap: 1em;
-  grid-template-areas: "kick snare clap tl th ch oh ride crash"; }
+  grid-template-areas: "kick snare snap tl th . ch oh ride crash"; }
 
 .drum-box--title {
   margin-top: 30%;
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 900;
   color: white;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 2px; }
 
 .drum-box--key {
   margin-bottom: 5px;
-  font-size: 12px;
-  font-weight: 800;
+  font-size: 16px;
+  font-weight: 700;
   color: coral;
   text-transform: uppercase;
   position: absolute;
   bottom: 0;
   width: 100%; }
 
-#drum-box--kick, #drum-box--snare, #drum-box--clap, #drum-box--closed-hat, #drum-box--open-hat, #drum-box--tom-lo, #drum-box--tom-hi, #drum-box--ride, #drum-box--crash {
+.drum-boxes--instructions {
+  margin-top: 20px;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center; }
+  .drum-boxes--instructions .example {
+    color: coral;
+    font-weight: 700; }
+
+#drum-box--kick, #drum-box--snare, #drum-box--snap, #drum-box--closed-hat, #drum-box--open-hat, #drum-box--tom-lo, #drum-box--tom-hi, #drum-box--ride, #drum-box--crash {
   display: inline-block;
   margin: 0 auto;
   width: 100px;
   border: 5px rgba(57, 221, 207, 0.616) solid;
   text-align: center;
-  position: relative; }
+  position: relative;
+  box-shadow: 5px 5px 0px rgba(57, 221, 207, 0.1); }
 
 .box-grow {
   animation: growBox .2s; }
@@ -94,8 +99,8 @@ body {
 #drum-box--snare {
   grid-area: snare; }
 
-#drum-box--clap {
-  grid-area: clap; }
+#drum-box--snap {
+  grid-area: snap; }
 
 #drum-box--closed-hat {
   grid-area: ch; }
