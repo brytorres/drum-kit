@@ -13,31 +13,31 @@ let crashBtn = document.querySelector("#drum-box--crash");
 
 // IMPORT SOUNDS
 const kick = new Howl({
-  src: ["../../public/snd/kick.wav"]
+  src: ["../../assets/snd/kick.wav"]
 });
 const snare = new Howl({
-  src: ["../../public/snd/snare.wav"]
+  src: ["../../assets/snd/snare.wav"]
 });
 const snap = new Howl({
-  src: ["../../public/snd/snap.wav"]
+  src: ["../../assets/snd/snap.wav"]
 });
 const cHat = new Howl({
-  src: ["../../public/snd/closed-hat.wav"]
+  src: ["../../assets/snd/closed-hat.wav"]
 });
 const oHat = new Howl({
-  src: ["../../public/snd/open-hat.wav"]
+  src: ["../../assets/snd/open-hat.wav"]
 });
 const lTom = new Howl({
-  src: ["../../public/snd/low-tom.WAV"]
+  src: ["../../assets/snd/low-tom.WAV"]
 });
 const hTom = new Howl({
-  src: ["../../public/snd/high-tom.WAV"]
+  src: ["../../assets/snd/high-tom.WAV"]
 });
 const ride = new Howl({
-  src: ["../../public/snd/ride.wav"]
+  src: ["../../assets/snd/ride.wav"]
 });
 const crash = new Howl({
-  src: ["../../public/snd/crash.wav"]
+  src: ["../../assets/snd/crash.wav"]
 });
 
 // DELAY TIMER
@@ -70,6 +70,7 @@ document.body.addEventListener("keydown", function(e) {
         break;
 
       case 87: // SNARE ----------------//
+        snare.volume(0.7);
         snare.play();
         let snareWait;
         snareBtn.classList.toggle("box-grow");
@@ -85,7 +86,7 @@ document.body.addEventListener("keydown", function(e) {
         break;
 
       case 69: // SNAP -----------------//
-        snap.volume(0.3);
+        snap.volume(0.2);
         snap.play();
         let snapWait;
         snapBtn.classList.toggle("box-grow");
@@ -180,7 +181,7 @@ document.body.addEventListener("keydown", function(e) {
         break;
 
       case 80: // CRASH ----------------//
-        crash.volume(0.6);
+        crash.volume(0.3);
         crash.play();
         let crashWait;
         crashBtn.classList.toggle("box-grow");
@@ -200,8 +201,3 @@ document.body.addEventListener("keydown", function(e) {
   false
 );
 
-// window.addEventListener("keyup", function(event) {
-//     delay(function(){
-//         div.classList.remove("box-grow");
-//         }, 500 );
-// });

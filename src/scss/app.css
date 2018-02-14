@@ -1,0 +1,131 @@
+/* 
+ * DRUM KIT 
+ *
+*/
+body {
+  margin: 0px;
+  font-family: 'Barlow', sans-serif; }
+
+.wrapper {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), linear-gradient(rgba(16, 8, 53, 0.5), rgba(13, 33, 58, 0.8)), url("/assets/images/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: 2fr minmax(100px, 150px) 2fr;
+  grid-gap: 1em;
+  grid-template-areas: ". title ." ". drums ." ". footer ."; }
+
+.site-title--section {
+  grid-area: title; }
+
+.site-title {
+  margin-top: 110px;
+  text-align: center;
+  font-size: 80px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 5px 5px 0px rgba(57, 221, 207, 0.2); }
+
+.drum-boxes--section {
+  grid-area: drums;
+  display: block;
+  padding-top: 22px; }
+
+.drum-boxes {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-auto-rows: 100px;
+  grid-gap: 1em;
+  grid-template-areas: "kick snare snap tl th . ch oh ride crash"; }
+
+.drum-box--title {
+  margin-top: 30%;
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+
+.drum-box--key {
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 700;
+  color: coral;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+
+.drum-boxes--instructions {
+  margin-top: 20px;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center; }
+  .drum-boxes--instructions .example {
+    color: coral;
+    font-weight: 700; }
+
+#drum-box--kick, #drum-box--snare, #drum-box--snap, #drum-box--closed-hat, #drum-box--open-hat, #drum-box--tom-lo, #drum-box--tom-hi, #drum-box--ride, #drum-box--crash {
+  display: inline-block;
+  margin: 0 auto;
+  width: 100px;
+  border: 5px rgba(57, 221, 207, 0.616) solid;
+  text-align: center;
+  position: relative;
+  box-shadow: 5px 5px 0px rgba(57, 221, 207, 0.1); }
+
+.box-grow {
+  animation: growBox .2s; }
+
+@keyframes growBox {
+  0% {
+    border: 5px rgba(57, 221, 207, 0.616) solid;
+    transform: scale(1); }
+  20% {
+    border: 7px #f9fafa solid;
+    transform: scale(1.1); }
+  100% {
+    border: 5px rgba(57, 221, 207, 0.616) solid;
+    transform: scale(1); } }
+#drum-box--kick {
+  grid-area: kick; }
+
+#drum-box--snare {
+  grid-area: snare; }
+
+#drum-box--snap {
+  grid-area: snap; }
+
+#drum-box--closed-hat {
+  grid-area: ch; }
+
+#drum-box--open-hat {
+  grid-area: oh; }
+
+#drum-box--tom-lo {
+  grid-area: tl; }
+
+#drum-box--tom-hi {
+  grid-area: th; }
+
+#drum-box--ride {
+  grid-area: ride; }
+
+#drum-box--crash {
+  grid-area: crash; }
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+  position: relative; }
+  .footer p {
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    display: block; }

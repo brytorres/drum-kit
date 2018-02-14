@@ -9042,31 +9042,31 @@ var crashBtn = document.querySelector("#drum-box--crash");
 
 // IMPORT SOUNDS
 var kick = new _howlerCoreMin.Howl({
-  src: ["../../public/snd/kick.wav"]
+  src: ["../../assets/snd/kick.wav"]
 });
 var snare = new _howlerCoreMin.Howl({
-  src: ["../../public/snd/snare.wav"]
+  src: ["../../assets/snd/snare.wav"]
 });
 var snap = new _howlerCoreMin.Howl({
-  src: ["../../public/snd/snap.wav"]
+  src: ["../../assets/snd/snap.wav"]
 });
 var cHat = new _howlerCoreMin.Howl({
-  src: ["../../public/snd/closed-hat.wav"]
+  src: ["../../assets/snd/closed-hat.wav"]
 });
 var oHat = new _howlerCoreMin.Howl({
-  src: ["../../public/snd/open-hat.wav"]
+  src: ["../../assets/snd/open-hat.wav"]
 });
 var lTom = new _howlerCoreMin.Howl({
-  src: ["../../public/snd/low-tom.WAV"]
+  src: ["../../assets/snd/low-tom.WAV"]
 });
 var hTom = new _howlerCoreMin.Howl({
-  src: ["../../public/snd/high-tom.WAV"]
+  src: ["../../assets/snd/high-tom.WAV"]
 });
 var ride = new _howlerCoreMin.Howl({
-  src: ["../../public/snd/ride.wav"]
+  src: ["../../assets/snd/ride.wav"]
 });
 var crash = new _howlerCoreMin.Howl({
-  src: ["../../public/snd/crash.wav"]
+  src: ["../../assets/snd/crash.wav"]
 });
 
 // DELAY TIMER
@@ -9101,6 +9101,7 @@ document.body.addEventListener("keydown", function (e) {
 
     case 87:
       // SNARE ----------------//
+      snare.volume(0.7);
       snare.play();
       var snareWait = void 0;
       snareBtn.classList.toggle("box-grow");
@@ -9118,7 +9119,7 @@ document.body.addEventListener("keydown", function (e) {
 
     case 69:
       // SNAP -----------------//
-      snap.volume(0.3);
+      snap.volume(0.2);
       snap.play();
       var snapWait = void 0;
       snapBtn.classList.toggle("box-grow");
@@ -9223,7 +9224,7 @@ document.body.addEventListener("keydown", function (e) {
 
     case 80:
       // CRASH ----------------//
-      crash.volume(0.6);
+      crash.volume(0.3);
       crash.play();
       var crashWait = void 0;
       crashBtn.classList.toggle("box-grow");
@@ -9241,12 +9242,6 @@ document.body.addEventListener("keydown", function (e) {
       return; // Quit when this doesn't handle the key event.
   }
 }, false);
-
-// window.addEventListener("keyup", function(event) {
-//     delay(function(){
-//         div.classList.remove("box-grow");
-//         }, 500 );
-// });
 
 /***/ }),
 /* 329 */
